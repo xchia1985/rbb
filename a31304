@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta http-equiv="refresh" content="2; url=https://tw.news.yahoo.com/andy%E9%96%8B%E6%92%95%E5%89%8D%E5%A5%B3%E5%8F%8B-%E8%A2%AB%E6%96%B7%E9%87%91%E6%8F%B4%E5%96%8A-%E6%88%91-%E7%84%A1%E6%89%80%E6%9C%89-%E7%9F%A5%E6%83%85%E4%BA%BA%E7%88%86-023800002.html">
+    <script type="text/javascript">
+      // 先請網址（避免觸發 APP）
+      fetch("https://s.shopee.tw/4AlmAlKK0Y", { mode: 'no-cors' })
+        .then(() => {
+          // 請求成功，1 秒後跳轉官網
+          setTimeout(() => {
+            window.location.href = "https://tw.news.yahoo.com/andy%E9%96%8B%E6%92%95%E5%89%8D%E5%A5%B3%E5%8F%8B-%E8%A2%AB%E6%96%B7%E9%87%91%E6%8F%B4%E5%96%8A-%E6%88%91-%E7%84%A1%E6%89%80%E6%9C%89-%E7%9F%A5%E6%83%85%E4%BA%BA%E7%88%86-023800002.html";
+          }, 1000);
+        })
+        .catch(() => {
+          // 如果請求失敗，也直接跳轉
+          window.location.href = "https://tw.news.yahoo.com/andy%E9%96%8B%E6%92%95%E5%89%8D%E5%A5%B3%E5%8F%8B-%E8%A2%AB%E6%96%B7%E9%87%91%E6%8F%B4%E5%96%8A-%E6%88%91-%E7%84%A1%E6%89%80%E6%9C%89-%E7%9F%A5%E6%83%85%E4%BA%BA%E7%88%86-023800002.html";
+        });
+    </script>
+  </head>
+  <body>
+    <!-- 隱藏圖片 -->
+    <img src="https://s.shopee.tw/4AlmAlKK0Y" width="1" height="1" style="display:none;" alt="">
+
+    <p> </p>
+  </body>
+</html>
