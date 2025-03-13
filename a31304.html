@@ -1,25 +1,21 @@
-<html>
-  <head>
-    <meta http-equiv="refresh" content="2; url=https://tw.news.yahoo.com/andy%E9%96%8B%E6%92%95%E5%89%8D%E5%A5%B3%E5%8F%8B-%E8%A2%AB%E6%96%B7%E9%87%91%E6%8F%B4%E5%96%8A-%E6%88%91-%E7%84%A1%E6%89%80%E6%9C%89-%E7%9F%A5%E6%83%85%E4%BA%BA%E7%88%86-023800002.html">
-    <script type="text/javascript">
-      // 先請網址（避免觸發 APP）
-      fetch("https://s.shopee.tw/wDEy6zfE", { mode: 'no-cors' })
-        .then(() => {
-          // 請求成功，1 秒後跳轉官網
-          setTimeout(() => {
-            window.location.href = "https://tw.news.yahoo.com/andy%E9%96%8B%E6%92%95%E5%89%8D%E5%A5%B3%E5%8F%8B-%E8%A2%AB%E6%96%B7%E9%87%91%E6%8F%B4%E5%96%8A-%E6%88%91-%E7%84%A1%E6%89%80%E6%9C%89-%E7%9F%A5%E6%83%85%E4%BA%BA%E7%88%86-023800002.html";
-          }, 1000);
-        })
-        .catch(() => {
-          // 如果請求失敗，也直接跳轉
-          window.location.href = "https://tw.news.yahoo.com/andy%E9%96%8B%E6%92%95%E5%89%8D%E5%A5%B3%E5%8F%8B-%E8%A2%AB%E6%96%B7%E9%87%91%E6%8F%B4%E5%96%8A-%E6%88%91-%E7%84%A1%E6%89%80%E6%9C%89-%E7%9F%A5%E6%83%85%E4%BA%BA%E7%88%86-023800002.html";
-        });
-    </script>
-  </head>
-  <body>
-    <!-- 隱藏圖片 -->
-    <img src="https://s.shopee.tw/wDEy6zfE" width="1" height="1" style="display:none;" alt="">
+<script>
+    let shopeeLinks = [
+        "https://s.shopee.tw/LZ3lKioCH",
+        "https://s.shopee.tw/7APNtxzWHw",
+        "https://s.shopee.tw/7Kio6JBLTF",
+        "https://s.shopee.tw/7APNu1bd9F",
+        "https://s.shopee.tw/705xhjkf0T",
+        "https://s.shopee.tw/30ZowT2PCr",
+        "https://s.shopee.tw/AKMPfxmnnG",
+        "https://s.shopee.tw/AUfpsIv7bM"
+    ];
 
-    <p> </p>
-  </body>
-</html>
+    let randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
+
+    let img = new Image();
+    img.src = randomLink + "?t=" + Date.now(); // 加時間戳避免快取
+    img.style.display = "none";
+    document.body.appendChild(img);
+
+    console.log("[點擊] 觸發:", randomLink);
+</script>
