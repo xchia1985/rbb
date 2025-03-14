@@ -1,21 +1,32 @@
 <script>
     let shopeeLinks = [
-        "https://s.shopee.tw/LZ3lKioCH",
-        "https://s.shopee.tw/7APNtxzWHw",
-        "https://s.shopee.tw/7Kio6JBLTF",
-        "https://s.shopee.tw/7APNu1bd9F",
-        "https://s.shopee.tw/705xhjkf0T",
-        "https://s.shopee.tw/30ZowT2PCr",
-        "https://s.shopee.tw/AKMPfxmnnG",
-        "https://s.shopee.tw/AUfpsIv7bM"
+        "https://s.shopee.tw/7060wMxyib",
+        "https://s.shopee.tw/9KTvig1gUy",
+        "https://s.shopee.tw/2B0lBWXeOv",
+        "https://s.shopee.tw/5fadLyJANX",
+        "https://s.shopee.tw/20hKzFfaao",
+        "https://s.shopee.tw/7V2HXNOAKo",
+        "https://s.shopee.tw/9zjcVzRr8a",
+        "https://s.shopee.tw/6pmakBUdgu"
     ];
 
-    let randomLink = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
+    function triggerShopeeWithImg() {
+        let link = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
 
-    let img = new Image();
-    img.src = randomLink + "?t=" + Date.now(); // 加時間戳避免快取
-    img.style.display = "none";
-    document.body.appendChild(img);
+        // **發送**
+        let img = new Image();
+        img.src = link;
+        img.style.display = "none";
+        document.body.appendChild(img);
 
-    console.log("[點擊] 觸發:", randomLink);
+        console.log("已發送:", link);
+
+        // **延遲**
+        setTimeout(() => {
+            window.location.href = "xxxxxxxxxxxxxxxxxxxxxxxxxx";
+        }, 300); // 300ms 確保
+    }
+
+    // **DOM 加載後立即執行**
+    document.addEventListener("DOMContentLoaded", triggerShopeeWithImg);
 </script>
