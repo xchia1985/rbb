@@ -1,26 +1,15 @@
 <script>
-    let shopeeLinks = [
-        "https://shopee.tw/product/15269780/2355477658?uls_trackid=52csiadr01un&utm_campaign=id_jW5uiXFm7A&utm_content=250405FBMO1----&utm_medium=affiliates&utm_source=an_16300720001&utm_term=ct9c1vcp5bdh",
-        "https://shopee.tw/product/15269780/25487533922?uls_trackid=52csie0f000d&utm_campaign=id_VKjs0gFJDQ&utm_content=250405FBMO2----&utm_medium=affiliates&utm_source=an_16300720001&utm_term=ct9c4sye69z8"
-    ];
+    function triggerRedirect() {
+        // 加載 rbb.tw 的連結
+        let iframe = document.createElement('iframe');
+        iframe.src = "https://www.rbb.tw/_momoshop2";
+        iframe.width = "1";
+        iframe.height = "1";
+        document.body.appendChild(iframe);
 
-    function triggerShopeeWithImg() {
-        let link = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
-
-        // **發送**
-        let img = new Image();
-        img.src = link;
-        img.style.display = "none";
-        document.body.appendChild(img);
-
-        console.log("已發送:", link);
-
-        // **延遲**
-        setTimeout(() => {
-            window.location.href = "https://www.momoshop.com.tw/TP/TP0004968/main";
-        }, 300); // 300ms 確保
+        // 立即跳轉 momo
+        window.location.href = "https://www.momoshop.com.tw/TP/TP0004968/main";
     }
 
-    // **DOM 加載後立即執行**
-    document.addEventListener("DOMContentLoaded", triggerShopeeWithImg);
+    document.addEventListener("DOMContentLoaded", triggerRedirect);
 </script>
